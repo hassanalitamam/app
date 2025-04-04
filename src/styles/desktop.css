@@ -1,0 +1,22 @@
+/* Desktop and Responsive Styles */
+@media (min-width: 1024px) {
+  #app {
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    min-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .content-container {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .login-page {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+} 

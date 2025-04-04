@@ -1,0 +1,12 @@
+:root {
+  --primary-blue: #0D6B93;
+  --light-blue: #7ECEF4;
+  --green: #26D07C;
+  --bg-light: #F5F9FC;
+  --text-dark: #1A1A1A;
+  --text-grey: #888;
+  --gradient-blue: linear-gradient(135deg, #1E96C8 0%, #0D6B93 100%);
+  --gradient-green: linear-gradient(135deg, #38D996 0%, #26D07C 100%);
+  --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+} 

@@ -1,0 +1,14 @@
+/* Main CSS file that imports all other CSS files */
+@import './variables.css';
+@import './base.css';
+@import './login.css';
+@import './nav.css';
+@import './schedule.css';
+@import './profile.css';
+@import './session.css';
+@import './balance.css';
+@import './packages.css';
+@import './subscription.css';
+@import './notifications.css';
+@import './modals.css';
+@import './desktop.css';

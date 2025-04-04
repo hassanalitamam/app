@@ -1,0 +1,631 @@
+/* Profile Page */
+.profile-page {
+  padding: 25px;
+  flex: 1;
+  margin-bottom: 60px; /* Reduced space before mobile menu */
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.profile-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-blue);
+  position: relative;
+}
+
+.profile-title::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: var(--gradient-blue);
+  bottom: -8px;
+  right: 0;
+  border-radius: 2px;
+}
+
+.back-to-home-btn {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-light);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 600;
+  color: var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+.back-to-home-btn:hover {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+/* Student Profile Section */
+.student-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: var(--bg-light);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  position: relative;
+}
+
+.student-avatar-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.student-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.avatar-edit-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.avatar-edit-btn:hover {
+  transform: scale(1.1);
+  background-color: #0a5a7d;
+}
+
+.student-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  color: var(--text-dark);
+}
+
+.student-grade {
+  font-size: 14px;
+  color: var(--text-grey);
+  margin-bottom: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  background-color: var(--bg-light);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.form-group:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 12px;
+  text-align: right;
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-size: 16px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px;
+  background-color: white;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 107, 147, 0.1);
+}
+
+/* Custom Phone Input */
+.custom-phone-input {
+  position: relative;
+}
+
+.custom-phone-input .form-input {
+  padding-right: 60px; /* Space for the flag on right */
+  padding-left: 15px; /* Normal padding on left */
+}
+
+.country-flag {
+  position: absolute;
+  top: 50%;
+  right: 15px; /* Position on the right side for RTL support */
+  transform: translateY(-50%);
+  width: 30px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.country-flag img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Subscription Section */
+.subscription-section {
+  margin-bottom: 25px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+
+.view-details-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-blue);
+  border: none;
+  color: white;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #0a5a7d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(13, 107, 147, 0.2);
+}
+
+.view-details-btn i {
+  font-size: 14px;
+}
+
+/* Simple Subscription Card */
+.subscription-simple-card {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.subscription-simple-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: var(--bg-light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.subscription-simple-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.subscription-simple-status {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: 600;
+}
+
+.subscription-simple-status.active {
+  background-color: rgba(38, 208, 124, 0.15);
+  color: var(--green);
+}
+
+.subscription-simple-status.expired {
+  background-color: rgba(244, 67, 54, 0.15);
+  color: #f44336;
+}
+
+.subscription-simple-dates {
+  padding: 12px 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background-color: white;
+}
+
+.simple-date-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.simple-date-label {
+  font-size: 12px;
+  color: var(--text-grey);
+}
+
+.simple-date-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Wallet Section */
+.wallet-section {
+  margin-bottom: 25px;
+  background-color: var(--bg-light);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
+}
+
+.wallet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.wallet-header h2 {
+  font-size: 20px;
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+
+.wallet-balance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.balance-amount {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.wallet-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.wallet-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wallet-action-btn:hover {
+  background-color: var(--primary-blue);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 107, 147, 0.15);
+}
+
+/* Invite Friend Section */
+.invite-friend-section {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.invite-friend-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  background: var(--gradient-green);
+  color: white;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(38, 208, 124, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.invite-friend-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(38, 208, 124, 0.25);
+}
+
+.invite-friend-btn i {
+  font-size: 18px;
+}
+
+.invite-note {
+  font-size: 14px;
+  color: var(--text-grey);
+}
+
+/* Logout Button */
+.logout-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+  color: white;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(211, 47, 47, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(211, 47, 47, 0.3);
+}
+
+.logout-btn i {
+  font-size: 18px;
+}
+
+/* Logout Confirmation Modal */
+.logout-confirm-modal .modal-container {
+  width: 320px;
+  padding: 25px;
+  text-align: center;
+}
+
+.logout-confirm-modal .modal-header h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #d32f2f;
+  margin-bottom: 15px;
+}
+
+.logout-confirm-modal .modal-body {
+  margin-bottom: 25px;
+}
+
+.logout-confirm-modal .modal-body p {
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+.logout-confirm-modal .modal-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.cancel-logout-btn, .confirm-logout-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-logout-btn {
+  background-color: #f5f5f5;
+  color: var(--text-grey);
+  border: 1px solid #e0e0e0;
+}
+
+.confirm-logout-btn {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.2);
+}
+
+.cancel-logout-btn:hover {
+  background-color: #eeeeee;
+}
+
+.confirm-logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(211, 47, 47, 0.3);
+}
+
+/* Coupon Modal Styles */
+.coupon-modal-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--primary-blue);
+}
+
+.coupon-form {
+  margin-bottom: 30px;
+}
+
+.coupon-form .form-group {
+  margin-bottom: 20px;
+}
+
+.coupon-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.coupon-form input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.coupon-form input:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 107, 147, 0.1);
+}
+
+/* Coupon Status */
+.coupon-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: rgba(38, 208, 124, 0.1);
+  border: 1px solid rgba(38, 208, 124, 0.3);
+  margin-top: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+.coupon-status.hidden {
+  display: none;
+}
+
+.coupon-icon {
+  font-size: 24px;
+  color: var(--green);
+}
+
+.coupon-message {
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.coupon-message span {
+  font-weight: 700;
+  color: var(--green);
+}
+
+/* Confirm Button */
+.confirm-coupon-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--gradient-blue);
+  color: white;
+  box-shadow: 0 5px 15px rgba(13, 107, 147, 0.2);
+}
+
+.confirm-coupon-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(13, 107, 147, 0.3);
+}
+
+.confirm-coupon-btn.disabled {
+  background: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .student-avatar {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .avatar-edit-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .student-name {
+    font-size: 24px;
+  }
+  
+  .student-grade {
+    font-size: 16px;
+  }
+}

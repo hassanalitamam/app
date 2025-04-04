@@ -1,0 +1,121 @@
+/* Session Page */
+.session-page {
+  padding: 25px;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px; /* Reduced space before mobile menu */
+  position: relative;
+  z-index: 10;
+}
+
+.session-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.session-header h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-blue);
+  margin: 10px 0;
+  text-align: center;
+}
+
+.session-time {
+  font-size: 16px;
+  color: var(--text-grey);
+  margin-bottom: 10px;
+}
+
+.back-button {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-light);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 600;
+  color: var(--primary-blue);
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.back-button:hover {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.session-content {
+  flex: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  background-color: white;
+  height: calc(100vh - 280px); /* Adjust to ensure enough space */
+}
+
+.session-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Session Buttons */
+.session-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+  padding: 5px;
+  background-color: #F5F9FC;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #e0e0e0;
+}
+
+.session-button {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  color: var(--text-grey);
+}
+
+.session-button.active {
+  background-color: var(--primary-blue);
+  color: white;
+  box-shadow: 0 3px 10px rgba(13, 107, 147, 0.2);
+}
+
+.session-button:hover:not(.active) {
+  background-color: rgba(13, 107, 147, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .session-content {
+    height: calc(100vh - 300px) !important; /* Adjust height on desktop */
+  }
+  
+  .session-iframe {
+    height: 100% !important;
+  }
+}

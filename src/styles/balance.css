@@ -1,0 +1,429 @@
+/* Balance Details Page */
+.balance-page {
+  padding: 25px;
+  flex: 1;
+  position: relative;
+  margin-bottom: 60px; /* Reduced space before mobile menu */
+  z-index: 10;
+}
+
+.balance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.balance-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-blue);
+  position: relative;
+}
+
+.balance-title::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: var(--gradient-blue);
+  bottom: -8px;
+  right: 0;
+  border-radius: 2px;
+}
+
+/* Balance Summary Card */
+.balance-summary-card {
+  background: var(--gradient-blue);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 30px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(13, 107, 147, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.balance-summary-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+}
+
+.balance-summary-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 5;
+}
+
+.balance-summary-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  opacity: 0.9;
+}
+
+.balance-summary-amount {
+  font-size: 36px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.balance-actions {
+  display: flex;
+  gap: 15px;
+  position: relative;
+  z-index: 5;
+}
+
+.balance-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.balance-action-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+.balance-action-btn:active {
+  transform: translateY(-1px);
+}
+
+.balance-action-btn i {
+  font-size: 16px;
+}
+
+/* Balance Statistics */
+.balance-statistics {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: white;
+  padding: 18px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+}
+
+.stat-card.income .stat-icon {
+  background: var(--gradient-green);
+  box-shadow: 0 5px 10px rgba(38, 208, 124, 0.2);
+}
+
+.stat-card.expenses .stat-icon {
+  background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+  box-shadow: 0 5px 10px rgba(245, 124, 0, 0.2);
+}
+
+.stat-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-title {
+  font-size: 14px;
+  color: var(--text-grey);
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* Transactions Section */
+.transactions-section {
+  margin-bottom: 80px; /* Reduced space at bottom */
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.transaction-item:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.transaction-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+.transaction-icon.deposit {
+  background: var(--gradient-green);
+  box-shadow: 0 3px 8px rgba(38, 208, 124, 0.2);
+}
+
+.transaction-icon.withdrawal {
+  background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+  box-shadow: 0 3px 8px rgba(245, 124, 0, 0.2);
+}
+
+.transaction-details {
+  flex: 1;
+}
+
+.transaction-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+}
+
+.transaction-date {
+  font-size: 13px;
+  color: var(--text-grey);
+}
+
+.transaction-amount {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.transaction-amount.deposit {
+  color: var(--green);
+}
+
+.transaction-amount.withdrawal {
+  color: #F57C00;
+}
+
+/* Coupon Modal */
+.payment-modal .modal-container {
+  padding: 30px;
+  max-width: 500px;
+}
+
+.coupon-modal-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--primary-blue);
+}
+
+.coupon-form {
+  margin-bottom: 30px;
+}
+
+.coupon-form .form-group {
+  margin-bottom: 20px;
+}
+
+.coupon-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.coupon-form input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.coupon-form input:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 107, 147, 0.1);
+}
+
+/* Coupon Status */
+.coupon-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: rgba(38, 208, 124, 0.1);
+  border: 1px solid rgba(38, 208, 124, 0.3);
+  margin-top: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+.coupon-status.hidden {
+  display: none;
+}
+
+.coupon-icon {
+  font-size: 24px;
+  color: var(--green);
+}
+
+.coupon-message {
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.coupon-message span {
+  font-weight: 700;
+  color: var(--green);
+}
+
+/* Confirm Button */
+.confirm-coupon-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--gradient-blue);
+  color: white;
+  box-shadow: 0 5px 15px rgba(13, 107, 147, 0.2);
+}
+
+.confirm-coupon-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(13, 107, 147, 0.3);
+}
+
+.confirm-coupon-btn.disabled {
+  background: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .balance-summary-amount {
+    font-size: 30px;
+  }
+  
+  .balance-page {
+    padding: 20px 15px;
+  }
+  
+  .stat-card {
+    padding: 15px;
+  }
+  
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .stat-value {
+    font-size: 18px;
+  }
+  
+  .balance-statistics {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .transactions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 15px;
+  }
+  
+  .balance-statistics {
+    display: flex;
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,113 @@
+/* Navigation Bar */
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  background-color: white;
+  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.06);
+  max-width: 100%;
+  margin: 0 auto;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  color: var(--text-grey);
+  transition: all 0.3s ease;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.nav-item:hover {
+  background-color: rgba(13, 107, 147, 0.05);
+}
+
+.nav-item i {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.nav-home {
+  background-color: var(--light-blue);
+  padding: 8px 25px;
+  border-radius: 30px;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.mobile-menu-btn {
+  display: block;
+}
+
+/* Desktop styles - now mimic mobile navigation */
+@media (min-width: 1024px) {
+  #app {
+    padding-bottom: 70px; /* Add padding to account for the nav bar at bottom */
+  }
+  
+  .nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px 0;
+    background-color: white;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.06);
+    width: 100% !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto !important;
+    border-right: none !important;
+  }
+  
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px !important;
+    color: var(--text-grey);
+    padding: 8px 15px !important;
+    margin-bottom: 0 !important;
+    border-radius: 10px !important;
+  }
+  
+  .nav-item i {
+    font-size: 24px !important;
+    margin-bottom: 4px !important;
+    margin-left: 0 !important;
+  }
+  
+  .nav-item span {
+    font-size: 12px !important;
+  }
+  
+  .nav-item.active {
+    color: var(--primary-blue) !important;
+    background-color: transparent !important;
+    font-weight: bold;
+  }
+}
+
+/* Adjust content spacing for desktop */
+@media (min-width: 1024px) {
+  .content-container {
+    margin-bottom: 70px; /* Ensure content doesn't get cut off by fixed nav */
+  }
+}
